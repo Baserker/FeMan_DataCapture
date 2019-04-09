@@ -13,3 +13,26 @@ CREATE TABLE `feman_label` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
+CREATE TABLE `bangumi_label` (
+  `BANGUMI_ID` bigint(20) NOT NULL COMMENT '番剧ID',
+  `LABEL_ID` int(11) NOT NULL COMMENT '标签ID',
+  `DEMO` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '简介',
+  `IS_STYLE` int(11) NOT NULL COMMENT '是否是风格'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+CREATE TABLE `bangumi_info` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '番剧主键',
+  `CNAME` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧中文名',
+  `ENAME` varchar(150) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧日文名',
+  `TYPE` varchar(200) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧所属类型',
+  `COUNTRY` varchar(50) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧所属国家',
+  `START_PUBLISH` datetime DEFAULT NULL COMMENT '番剧开播时间',
+  `DESCRIBE` varchar(1024) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧介绍',
+  `CHARACTER_DATE` varchar(1024) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧主要角色',
+  `PERFORMERS_DATA` varchar(3072) COLLATE utf8_bin DEFAULT NULL COMMENT '番剧演职信息',
+  `PIC_URL` varchar(512) COLLATE utf8_bin DEFAULT NULL COMMENT '图片链接',
+  `IS_END` int(11) DEFAULT NULL COMMENT '是否完结',
+  `IS_NEW` int(11) DEFAULT NULL COMMENT '是否是新番',
+  `SERIALIZE_TIME` varchar(256) COLLATE utf8_bin DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
