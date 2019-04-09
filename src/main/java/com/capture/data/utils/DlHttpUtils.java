@@ -1,4 +1,4 @@
-package com.capture.data.Utils;
+package com.capture.data.utils;
 
 import httpUtils.HttpResult;
 import httpUtils.httpClient.HttpUtil;

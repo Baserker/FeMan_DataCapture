@@ -1,0 +1,15 @@
+CREATE TABLE `feman_label` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `C_NAME` varchar(50) COLLATE utf8_bin DEFAULT NULL COMMENT '标签中文名',
+  `E_NAME` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '标签英文名',
+  `LOCAL_KEY` varchar(150) COLLATE utf8_bin NOT NULL COMMENT '标签本地关键字',
+  `DL_KEY` varchar(150) COLLATE utf8_bin DEFAULT NULL COMMENT '嘀哩嘀哩中对应的关键字，可以为空',
+  `BL_KEY` varchar(150) COLLATE utf8_bin DEFAULT NULL COMMENT 'bilibili中对应的关键字，可以为空',
+  `ANTHOR_KEY` varchar(150) COLLATE utf8_bin DEFAULT NULL COMMENT '其他网站的关键字，可以为空',
+  `PARENT_ID` int(11) NOT NULL DEFAULT '0' COMMENT '标签的父节点',
+  `DEMO` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '简单说明',
+  `IS_SHOW` int(11) DEFAULT NULL COMMENT '是否显示：0，不现实；1，显示',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
